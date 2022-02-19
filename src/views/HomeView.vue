@@ -21,5 +21,6 @@ export default {
 <style>
 .wrapper {
   margin: 0px 150px 0px 150px;
+  padding: 10px;
 }
 </style>

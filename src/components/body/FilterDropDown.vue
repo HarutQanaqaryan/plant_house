@@ -1,7 +1,12 @@
 <template>
-  <div class="filter-dropdown" @click="showHideDropDown">
-    <div class="filter-dropdown_title">
-      <span>{{ title }}</span>
+  <div
+    class="filter-dropdown"
+    :class="isOpened ? 'opened-block' : 'closed-block'"
+    @click="showHideDropDown"
+    :id="filterId"
+  >
+    <div class="filter-dropdown_title" :id="filterId">
+      <span :id="filterId">{{ title }}</span>
       <IsOpenBlock :isOpen="isOpened" />
     </div>
     <ul v-if="isOpened">
@@ -14,6 +19,7 @@
 
 <script>
 import IsOpenBlock from "./IsOpenBlock.vue";
+
 export default {
   components: {
     IsOpenBlock,
@@ -23,6 +29,7 @@ export default {
     items: Array,
     isOpened: Boolean,
     showHideDropDown: Function,
+    filterId: Number,
   },
 };
 </script>

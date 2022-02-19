@@ -1,0 +1,23 @@
+.filter-reset {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  cursor: pointer;
+}
+.filter-reset-first_line {
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  background: #2b441d;
+  transform: rotate(135deg);
+}
+.filter-reset-second_line {
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  background: #2b441d;
+  transform: rotate(-135deg);
+}
+.filter-reset-title {
+  margin-left: 15px;
+}

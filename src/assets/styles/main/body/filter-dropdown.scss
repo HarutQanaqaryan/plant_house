@@ -3,13 +3,21 @@
   width: 340px;
   height: fit-content;
   background: #ffffff;
-  border: 1px solid #b4c730;
   box-sizing: border-box;
   padding: 25px;
   margin: 10px 0px 10px 0px;
 }
 .filter_acts {
   padding: 0px;
+  border: 1px solid #b4c730;
+}
+.closed-block {
+  border: none;
+  background-color: #F8FAE3;
+}
+.opened-block {
+  background-color: none;
+  border: 1px solid #b4c730;
 }
 .filter-dropdown_title {
   font-family: "Lato", sans-serif;

@@ -1,8 +1,9 @@
 <template>
   <div class="filter">
     <div class="filter-reset">
-      <span></span>
-      <span>Сбросить фильтр</span>
+      <span class="filter-reset-first_line"></span>
+      <span class="filter-reset-second_line"></span>
+      <span class="filter-reset-title">Сбросить фильтр</span>
     </div>
     <div class="filter_acts">
       <SimpleCheckBox label="Акции" />
@@ -12,35 +13,20 @@
     </div>
   </div>
   <DropDown
-    title="Товары для сада"
-    v-bind:items="productTypes"
-    :isOpened="openedFilter"
-    :showHideDropDown="showDropDown"
-  />
-  <DropDown
-    title="Товары для водоемов"
-    :items="alltypes"
-    :isOpened="openedFilter"
-    :showHideDropDown="showDropDown"
-  />
-  <DropDown
-    title="Растения для сада"
-    :items="alltypes"
-    :isOpened="openedFilter"
-    :showHideDropDown="showDropDown"
-  />
-  <DropDown title="Печи, барбекю" :items="alltypes" :isOpened="openedFilter" />
-  <DropDown
-    title="Новогодняя иллюминация"
-    :items="alltypes"
-    :isOpened="openedFilter"
-    :showHideDropDown="showDropDown"
+    v-for="filter in filtersProps"
+    :key="filter.id"
+    :filterId="filter.id"
+    :title="filter.title"
+    :items="filter.types"
+    :isOpened="filter.isOpen"
+    @click="showDropDown"
   />
 </template>
 
 <script>
 import DropDown from "./FilterDropDown.vue";
 import SimpleCheckBox from "./SimpleCheckBox.vue";
+import { filters } from "@/helpers/filterDropDowns.js";
 
 export default {
   name: "PlantHouseBody",
@@ -50,26 +36,19 @@ export default {
   },
   data() {
     return {
-      productTypes: [
-        "Газоны и лужайки",
-        "Эксклюзивные (+штамбовые)",
-        "Хвойные",
-        "Лиственные",
-        "Плодо-ягодные",
-        "Розы",
-        "Злаки",
-        "Лианы",
-        "Многолетние цветы и травы",
-        "Однолетние",
-      ],
-      alltypes: ["Другие", "Другие", "Другие", "Другие"],
-      openedFilter: false,
+      filtersProps: [...filters],
     };
   },
   methods: {
-    showDropDown({ target: { name } }) {
-      console.log(name);
+    showDropDown({ target: { id } }) {
+      this.filtersProps = this.filtersProps.map((el) =>
+        el.id === parseInt(id) ? { ...el, isOpen: !el.isOpen } : el
+      );
     },
   },
 };
 </script>
+
+<style lang="scss">
+@import "@/assets/styles/main/body/filter-product.scss";
+</style>
