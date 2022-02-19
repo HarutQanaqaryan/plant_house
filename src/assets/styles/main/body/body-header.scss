@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Kazimir";
+  src: local("Kazimir Medium"), local("Kazimir-Medium"),
+    url("~@/assets/fonts/kazimir/Kazimir-Medium.woff2") format("woff2"),
+    url("~@/assets/fonts/kazimir/Kazimir-Medium.woff") format("woff"),
+    url("~@/assets/fonts/kazimir/Kazimir-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+.body-header {
+  margin-top: 106px;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+}
+.body-header_title {
+  font-family: "Kazimir Medium";
+  font-size: 30px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #2b441d;
+  margin: 0;
+}
+.body-header_description {
+  margin-top: 50px;
+  display: flex;
+  justify-content: baseline;
+}
+.body-header_description_separator {
+  width: 80px;
+  height: 1px;
+  background: #b4c730;
+  margin-right: 50px;
+}
+.body-header_description_title {
+  font-family: Kazimir;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 180%;
+  margin-top: -10px;
+  color: #959882;
+}
