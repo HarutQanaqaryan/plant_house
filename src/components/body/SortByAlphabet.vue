@@ -6,6 +6,7 @@
         class="sort-by-alphabet_letter"
         v-for="letter in sortAlphabet"
         :key="letter"
+        @click="search"
         >{{ letter }}</span
       >
     </div>
@@ -20,6 +21,9 @@ export default {
     return {
       sortAlphabet,
     };
+  },
+  props: {
+    search: Function,
   },
 };
 </script>

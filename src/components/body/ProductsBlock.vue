@@ -1,6 +1,6 @@
 <template>
   <div class="products-block">
-    <SortByAlphabet />
+    <SortByAlphabet :search="searchProductByLetter" />
     <div class="products-block_cards">
       <ProductCard
         v-for="product in products"
@@ -25,6 +25,8 @@ import ProductCard from "./ProductCard.vue";
 import ProductsPagination from "./ProductsPagination.vue";
 import { productsData } from "../../helpers/productsData";
 
+localStorage.setItem("PRODUCTS", JSON.stringify(productsData));
+
 export default {
   components: {
     SortByAlphabet,
@@ -34,7 +36,15 @@ export default {
   data() {
     return {
       products: productsData,
+      productDataStorage: JSON.parse(localStorage.getItem("PRODUCTS")),
     };
+  },
+  methods: {
+    searchProductByLetter({ target: { innerText } }) {
+      this.products = this.productDataStorage.filter((el) =>
+        el.name.startsWith(innerText)
+      );
+    },
   },
 };
 </script>
