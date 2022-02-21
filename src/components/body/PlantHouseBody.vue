@@ -2,7 +2,10 @@
   <main class="body">
     <BreadCrumbs />
     <BodyHeader />
-    <FilterProduct />
+    <div class="body-blocks">
+      <FilterProduct />
+      <ProductsBlock />
+    </div>
   </main>
 </template>
 
@@ -10,6 +13,7 @@
 import BreadCrumbs from "./BreadCrumbs.vue";
 import BodyHeader from "./BodyHeader.vue";
 import FilterProduct from "./FilterProducts.vue";
+import ProductsBlock from "./ProductsBlock.vue";
 
 export default {
   name: "PlantHouseBody",
@@ -17,6 +21,7 @@ export default {
     BreadCrumbs,
     BodyHeader,
     FilterProduct,
+    ProductsBlock,
   },
 };
 </script>

@@ -1,0 +1,30 @@
+.loyalty-program {
+  position: absolute;
+  width: 340px;
+  height: 230px;
+  background: #ffffff;
+  border: 1px solid #b3eae7;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.loyalty-program_title {
+  font-family: Kazimir;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #2b441d;
+  margin: 40px 0px 0px 35px;
+}
+.loyalty-program_link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 33px 0px 0px 35px;
+}
+.loyalty-program-three {
+  width: 172.81px;
+  height: 261px;
+  margin-top: -45px;
+}

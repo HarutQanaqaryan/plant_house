@@ -3,17 +3,20 @@
     <PlantHouseHeader />
     <PlantHouseBody />
   </div>
+  <PlantHouseFooter />
 </template>
 
 <script>
 import PlantHouseHeader from "@/components/header/PlantHouseHeader.vue";
 import PlantHouseBody from "@/components/body/PlantHouseBody.vue";
+import PlantHouseFooter from "@/components/footer/PlantHouseFooter.vue";
 
 export default {
   name: "HomeView",
   components: {
     PlantHouseHeader,
     PlantHouseBody,
+    PlantHouseFooter,
   },
 };
 </script>

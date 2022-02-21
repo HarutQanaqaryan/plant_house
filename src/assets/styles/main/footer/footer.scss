@@ -1,0 +1,121 @@
+.footer {
+  height: 425px;
+  background: #f2f3e4;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 100px;
+  width: 100%;
+}
+
+.footer-develop {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 210px;
+  span {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #2b441d;
+    margin-top: 169px;
+  }
+}
+.footer-menu,
+.footer-catalog {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  h4 {
+    font-family: "Kazimir";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2b441d;
+    margin-bottom: 30px;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+    font-family: "Kazimir";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #2b441d;
+    margin: 0px 0px 20px 25px;
+  }
+}
+
+.footer-contact_social-media {
+  display: flex;
+  flex-direction: column;
+  span {
+    margin-bottom: 90px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 17px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  span:hover {
+    border: 1px solid #97aa12;
+    border-radius: 50%;
+  }
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  h4 {
+    font-family: "Kazimir";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #2b441d;
+    margin-bottom: 40px;
+  }
+  span {
+    font-family: Kazimir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2b441d;
+  }
+}
+
+.footer-contact_btn {
+  border: 1px solid #97aa12;
+  box-sizing: border-box;
+  width: 181px;
+  height: 52px;
+  margin-top: 40px;
+  button {
+    background: #97aa12;
+    width: 171px;
+    height: 42px;
+    border: none;
+    margin: 5px;
+    font-family: "Kazimir";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+}

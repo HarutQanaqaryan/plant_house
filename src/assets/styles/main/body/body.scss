@@ -1,6 +1,7 @@
 .body {
   padding-top: 70px;
   background: linear-gradient(rgb(251, 251, 251), rgb(255, 255, 255));
+  
 }
 .filter {
   margin-top: 70px;
@@ -15,4 +16,7 @@
   display: flex;
   align-items: center;
   color: #97aa12;
+}
+.body-blocks {
+  display: flex;
 }

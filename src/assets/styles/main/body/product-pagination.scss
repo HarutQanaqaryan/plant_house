@@ -1,0 +1,38 @@
+.product-pagination {
+  display: flex;
+  justify-content: center;
+  height: 345px;
+  font-family: "Kazimir";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: right;
+  color: #97aa12;
+  padding-top: 10px;
+  div {
+    display: flex;
+    align-items: center;
+    margin-top: -150px;
+  }
+}
+
+.product-pagination_current {
+  font-family: "Kazimir";
+  font-size: 16px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #b4c730;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 26px;
+}
+.product-pagination_next_page,
+.product-pagination_intermediate_pages,
+.product-pagination_last_page {
+  margin-right: 26px;
+  font-family: "Kazimir";
+}
