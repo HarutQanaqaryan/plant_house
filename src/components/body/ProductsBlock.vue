@@ -28,6 +28,10 @@ import { productsData } from "../../helpers/productsData";
 localStorage.setItem("PRODUCTS", JSON.stringify(productsData));
 
 export default {
+  props: {
+    minPrice: Number,
+    maxPrice: Number,
+  },
   components: {
     SortByAlphabet,
     ProductCard,
@@ -45,6 +49,12 @@ export default {
         el.name.startsWith(innerText)
       );
     },
+  },
+  updated() {
+    this.products = this.productDataStorage.filter(
+      (el) =>
+        el.discountPrice >= this.minPrice && el.discountPrice <= this.maxPrice
+    );
   },
 };
 </script>

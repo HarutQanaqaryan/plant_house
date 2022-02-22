@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isOpen">
+  <div>
     <div class="slider">
       <div
         class="slider-track"
@@ -12,7 +12,8 @@
         step="10"
         id="slider-1"
         v-model.number="minPrice"
-        @input="slideOne"
+        @input="changeMinPrice"
+        @change="updateMinPrice"
       />
       <input
         type="range"
@@ -21,12 +22,9 @@
         step="10"
         id="slider-2"
         v-model.number="maxPrice"
-        @input="slideTwo"
+        @input="changeMaxPrice"
+        @change="updateMaxPrice"
       />
-    </div>
-    <div class="prices">
-      <span class="price">{{ minPrice }}</span>
-      <span class="price">{{ maxPrice }}</span>
     </div>
   </div>
 </template>
@@ -37,12 +35,13 @@ export default {
     return {
       minPrice: 0,
       maxPrice: 3500,
-      minGap: 0,
-      fillColor: ``,
     };
   },
   props: {
-    isOpen: Boolean,
+    changeMinPrice: Function,
+    changeMaxPrice: Function,
+    updateMinPrice: Function,
+    updateMaxPrice: Function,
   },
   methods: {
     setFillColor() {
@@ -50,19 +49,9 @@ export default {
       let percent2 = (this.maxPrice / 3500) * 100;
       return `linear-gradient(to right, #dadae5 ${percent1}% , #97aa12 ${percent1}% , #97aa12 ${percent2}%, #dadae5 ${percent2}%)`;
     },
-
-    slideOne() {
-      if (parseInt(this.maxPrice) - parseInt(this.minPrice) <= this.minGap) {
-        this.minPrice = parseInt(this.maxPrice) - this.minGap;
-      }
-      this.setFillColor();
-    },
-    slideTwo() {
-      if (parseInt(this.maxPrice) - parseInt(this.minPrice) <= this.minGap) {
-        this.maxPrice = parseInt(this.minPrice) + this.minGap;
-      }
-      this.setFillColor();
-    },
+  },
+  updated() {
+    this.setFillColor();
   },
 };
 </script>

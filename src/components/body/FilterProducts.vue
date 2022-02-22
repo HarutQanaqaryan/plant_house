@@ -26,6 +26,8 @@
       title="Цена"
       :isOpened="isPriceDropDown"
       :showHideDropDown="showSlider"
+      :updateMinPrice="updateMinPrice"
+      :updateMaxPrice="updateMaxPrice"
     />
     <CheckBoxesDropDown
       title="Цвет"
@@ -47,6 +49,10 @@ import { filters } from "@/helpers/filterDropDowns.js";
 
 export default {
   name: "PlantHouseBody",
+  props: {
+    updateMinPrice: Function,
+    updateMaxPrice: Function,
+  },
   components: {
     DropDown,
     SimpleCheckBox,

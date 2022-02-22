@@ -7,7 +7,18 @@
       <span>{{ title }}</span>
       <IsOpenBlock :isOpen="isOpened" />
     </div>
-    <SimpleSlider :isOpen="isOpened" />
+    <div v-show="isOpened">
+      <SimpleSlider
+        :changeMinPrice="setMinPrice"
+        :changeMaxPrice="setMaxPrice"
+        :updateMinPrice="updateMinPrice"
+        :updateMaxPrice="updateMaxPrice"
+      />
+      <div class="prices">
+        <span class="price">{{ minPrice }}</span>
+        <span class="price">{{ maxPrice }}</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,6 +27,12 @@ import IsOpenBlock from "./IsOpenBlock.vue";
 import SimpleSlider from "./SimpleSlider.vue";
 
 export default {
+  data() {
+    return {
+      minPrice: 0,
+      maxPrice: 3500,
+    };
+  },
   components: {
     IsOpenBlock,
     SimpleSlider,
@@ -24,6 +41,16 @@ export default {
     title: String,
     isOpened: Boolean,
     showHideDropDown: Function,
+    updateMinPrice: Function,
+    updateMaxPrice: Function,
+  },
+  methods: {
+    setMinPrice({ target: { value } }) {
+      this.minPrice = value;
+    },
+    setMaxPrice({ target: { value } }) {
+      this.maxPrice = value;
+    },
   },
 };
 </script>
