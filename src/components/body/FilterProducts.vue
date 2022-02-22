@@ -48,7 +48,6 @@ import LoyaltyProgram from "./LoyaltyProgram.vue";
 import { filters } from "@/helpers/filterDropDowns.js";
 
 export default {
-  name: "PlantHouseBody",
   props: {
     updateMinPrice: Function,
     updateMaxPrice: Function,

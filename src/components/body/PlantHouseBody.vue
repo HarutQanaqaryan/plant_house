@@ -22,7 +22,7 @@ import ProductsBlock from "./ProductsBlock.vue";
 import MobileFilterDropDown from "./MobileFilterDropDown.vue";
 
 export default {
-  name: "PlantHouseBody",
+  name: "plant-house-body",
   components: {
     BreadCrumbs,
     BodyHeader,

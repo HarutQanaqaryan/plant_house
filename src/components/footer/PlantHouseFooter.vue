@@ -63,6 +63,7 @@
 <script>
 import MobileFooter from "./MobileFooter.vue";
 export default {
+  name: "plant-house-footer",
   components: {
     MobileFooter,
   },

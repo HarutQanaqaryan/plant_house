@@ -8,7 +8,7 @@ import MobileNavBar from "./MobileNavBar.vue";
 import RegularNavBar from "./RegularMenu.vue";
 
 export default {
-  name: "PlantHouseHeader",
+  name: "plant-house-header",
   components: {
     MobileNavBar,
     RegularNavBar,
