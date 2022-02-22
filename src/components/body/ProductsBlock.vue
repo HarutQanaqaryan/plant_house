@@ -41,20 +41,25 @@ export default {
     return {
       products: productsData,
       productDataStorage: JSON.parse(localStorage.getItem("PRODUCTS")),
+      firstLetter: "",
     };
   },
   methods: {
     searchProductByLetter({ target: { innerText } }) {
-      this.products = this.productDataStorage.filter((el) =>
-        el.name.startsWith(innerText)
+      this.firstLetter = innerText;
+      this.filterProductsData();
+    },
+    filterProductsData() {
+      this.products = this.productDataStorage.filter(
+        (el) =>
+          el.name.startsWith(this.firstLetter) &&
+          el.discountPrice >= this.minPrice &&
+          el.discountPrice <= this.maxPrice
       );
     },
   },
   updated() {
-    this.products = this.productDataStorage.filter(
-      (el) =>
-        el.discountPrice >= this.minPrice && el.discountPrice <= this.maxPrice
-    );
+    this.filterProductsData();
   },
 };
 </script>
