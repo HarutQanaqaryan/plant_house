@@ -23,7 +23,18 @@ export default {
 
 <style>
 .wrapper {
-  margin: 0px 150px 0px 150px;
-  padding: 10px;
+  max-width: 1510px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0px 20px 0px 20px;
+  }
 }
 </style>

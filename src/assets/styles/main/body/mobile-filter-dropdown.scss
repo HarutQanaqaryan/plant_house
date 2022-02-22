@@ -1,0 +1,26 @@
+.mobile-filter-dropdown {
+  max-width: 690px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #f8fae3;
+  cursor: pointer;
+}
+
+.mobile-filter-dropdown_title {
+  font-family: "Kazimir";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #97aa12;
+}
+.mobile-filter-dropdown-arrow {
+  position: absolute;
+  right: 20px;
+  margin-top: -20px;
+}

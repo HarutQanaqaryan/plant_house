@@ -1,11 +1,10 @@
 .loyalty-program {
-  position: absolute;
   width: 340px;
-  height: 230px;
   background: #ffffff;
   border: 1px solid #b3eae7;
   box-sizing: border-box;
   display: flex;
+  margin-bottom: 30px;
 }
 
 .loyalty-program_title {
@@ -21,10 +20,27 @@
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 33px 0px 0px 35px;
+  margin: 33px 0px 45px 45px;
 }
 .loyalty-program-three {
   width: 172.81px;
   height: 261px;
   margin-top: -45px;
+}
+@media (max-width: 1024px) {
+  .loyalty-program {
+    width: 210px;
+    height: 190px;
+  }
+  .loyalty-program-three {
+    width: 84px;
+    margin: -30px 0px 0px -35px;
+  }
+  .loyalty-program_title {
+    font-size: 16px;
+  }
+  .loyalty-program_link {
+    width: 107px;
+    margin: 33px 0px 45px 25px;
+  }
 }

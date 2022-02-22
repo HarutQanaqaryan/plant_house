@@ -43,3 +43,19 @@
   margin-top: -10px;
   color: #959882;
 }
+@media (max-width: 720px) {
+  .body-header {
+    margin: 114px 0px 0px 0px;
+  }
+  .body-header_title {
+    font-size: 24px;
+  }
+  .body-header_description_title {
+    font-size: 12px;
+    width: 235px;
+  }
+  .body-header_description_separator {
+    width: 40px;
+    margin-right: 40px;
+  }
+}

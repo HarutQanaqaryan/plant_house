@@ -1,0 +1,32 @@
+.burgermenu-icon {
+  width: 41px;
+  height: 41px;
+  border: 1px solid #b5c831;
+  box-sizing: border-box;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+.burgermenu-icon_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 35px;
+  height: 35px;
+  background: #b4c730;
+  box-shadow: 0px 2px 6px rgba(0, 54, 85, 0.2);
+  border-radius: 40px;
+}
+.burgermenu-icon_first_line,
+.burgermenu-icon_second_line {
+  width: 19px;
+  height: 1px;
+  background: #2b441d;
+  border-radius: 2px;
+}
+.burgermenu-icon_second_line {
+  margin-top: 4px;
+}

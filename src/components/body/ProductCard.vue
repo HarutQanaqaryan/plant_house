@@ -24,15 +24,21 @@
       />
     </div>
     <div>
-      <div class="product-card_type">
+      <div class="product-card_type" v-if="regularScreenWidth">
         <span class="product-card_type-line"></span>
-        <h6 class="product-card_type-name">{{ type }}</h6>
+        <h6 class="product-card_type-name">
+          {{ type }}
+        </h6>
       </div>
-      <div class="product-card_basket" v-show="isHover">
+      <div class="product-card_basket" v-if="isHover">
+        <img src="@/assets/icons/basket.svg" />
+      </div>
+      <div class="product-card_basket" v-if="!regularScreenWidth">
         <img src="@/assets/icons/basket.svg" />
       </div>
       <div class="product-card_prices">
-        <span class="product-card_price">{{ price }} ₽</span
+        <span class="product-card_price" v-if="regularScreenWidth"
+          >{{ price }} ₽</span
         ><span class="product-card_discount-price">{{ discountPrice }} ₽</span>
       </div>
     </div>
@@ -54,6 +60,7 @@ export default {
   data() {
     return {
       isHover: false,
+      regularScreenWidth: window.screen.width >= 720,
     };
   },
 };

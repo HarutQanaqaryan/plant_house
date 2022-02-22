@@ -36,3 +36,18 @@
   margin-right: 26px;
   font-family: "Kazimir";
 }
+
+@media (max-width: 720px) {
+  .product-pagination {
+    font-size: 10px;
+  }
+  .product-pagination_current {
+    font-size: 12px;
+    width: 40px;
+    height: 40px;
+  }
+  .product-pagination_next {
+    width: 6px;
+    height: 13px;
+  }
+}

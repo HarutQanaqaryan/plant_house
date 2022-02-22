@@ -1,12 +1,14 @@
 <template>
   <main class="body">
-    <BreadCrumbs />
+    <BreadCrumbs v-if="regularScreenWidth" />
     <BodyHeader />
     <div class="body-blocks">
       <FilterProduct
+        v-if="regularScreenWidth"
         :updateMinPrice="updateMinPrice"
         :updateMaxPrice="updateMaxPrice"
       />
+      <MobileFilterDropDown v-if="!regularScreenWidth" />
       <ProductsBlock :minPrice="minPrice" :maxPrice="maxPrice" />
     </div>
   </main>
@@ -17,6 +19,7 @@ import BreadCrumbs from "./BreadCrumbs.vue";
 import BodyHeader from "./BodyHeader.vue";
 import FilterProduct from "./FilterProducts.vue";
 import ProductsBlock from "./ProductsBlock.vue";
+import MobileFilterDropDown from "./MobileFilterDropDown.vue";
 
 export default {
   name: "PlantHouseBody",
@@ -25,9 +28,14 @@ export default {
     BodyHeader,
     FilterProduct,
     ProductsBlock,
+    MobileFilterDropDown,
   },
   data() {
-    return { minPrice: 0, maxPrice: 3500 };
+    return {
+      minPrice: 0,
+      maxPrice: 3500,
+      regularScreenWidth: window.screen.width > 720,
+    };
   },
   methods: {
     updateMinPrice({ target: { value } }) {

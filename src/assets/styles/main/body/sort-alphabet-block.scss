@@ -16,9 +16,9 @@
   color: #959882;
 }
 .sort-by-alphabet_letters {
-    display: flex;
-    align-items: center;
-    margin-left: 83px;
+  display: flex;
+  align-items: center;
+  margin-left: 83px;
 }
 .sort-by-alphabet_letter {
   font-family: "Lato", sans-serif;
@@ -28,10 +28,25 @@
   line-height: 150%;
   display: flex;
   align-items: center;
-  color: #2B441D;
+  color: #2b441d;
   margin-left: 15px;
   cursor: pointer;
 }
 .sort-by-alphabet_letter:hover {
-    border-bottom: 1px solid #2B441D;
+  border-bottom: 1px solid #2b441d;
+}
+@media (max-width: 720px) {
+  .sort-by-alphabet {
+    padding-left: 0;
+  }
+  .sort-by-alphabet_title,
+  .sort-by-alphabet_letter {
+    font-size: 12px;
+  }
+  .sort-by-alphabet_letters {
+    margin-left: 5px;
+  }
+  .sort-by-alphabet_letter {
+    margin-left: 8px;
+  }
 }

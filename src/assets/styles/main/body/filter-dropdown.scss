@@ -1,5 +1,6 @@
 .filter-dropdown,
 .filter_acts {
+  font-family: "Lato", sans-serif;
   width: 340px;
   height: fit-content;
   background: #ffffff;
@@ -13,7 +14,7 @@
 }
 .closed-block {
   border: none;
-  background-color: #F8FAE3;
+  background-color: #f8fae3;
 }
 .opened-block {
   background-color: none;
@@ -28,7 +29,6 @@
   color: #97aa12;
   display: flex;
   justify-content: space-between;
-  align-content: center;
   cursor: pointer;
 }
 .filter-dropdown_item {
@@ -59,4 +59,32 @@
 }
 .filter-colors {
   margin: 0px;
+}
+@media (max-width: 1024px) {
+  .filter-dropdown,
+  .filter_acts {
+    width: 210px;
+    height: fit-content;
+    background: #ffffff;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 10px 0px 10px 0px;
+    font-size: 14px;
+  }
+  .filter-dropdown_title {
+    font-size: 14px;
+  }
+  .closed-second-line,
+  .closed-first-line,
+  .opened {
+    height: 13px;
+  }
+  .filter_acts {
+    label {
+      margin: 0px 0px 10px 0px;
+    }
+  }
+  .filter-dropdown_item {
+    font-size: 14px;
+  }
 }

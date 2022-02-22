@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="filter-container">
     <div class="filter">
       <div class="filter-reset">
         <span class="filter-reset-first_line"></span>
